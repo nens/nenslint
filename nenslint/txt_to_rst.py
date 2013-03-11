@@ -27,8 +27,9 @@ class Checker(object):
             logger.debug("Found .txt files: %s", self.txt_files)
             return False
         if os.path.exists('setup.py'):
-            if '.txt' in open('setup.py').read():
-                logger.debug("Found .txt string in setup.py")
+            if 'README.txt' in open('setup.py').read():
+                # Only check README.txt to limit false positives.
+                logger.debug("Found README.txt string in setup.py")
                 return False
         return True
 
