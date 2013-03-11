@@ -3,7 +3,7 @@ Available checks
 
 
 Do we have old .txt files in the project root?
-------------------------------------------------------------------------------
+----------------------------------------------
 
 Reason
 
@@ -16,10 +16,8 @@ Fix
     uses the readme and changelog in its long description.
     
 
-
-
 Do we have a proper ``.gitignore`` file?
-------------------------------------------------------------------------------
+----------------------------------------
 
 Reason
 
@@ -38,5 +36,3 @@ Fix
     https://raw.github.com/lizardsystem/nensskel/master/nensskel/templates/library/+dot+gitignore_tmpl
     and copy the contents to your ``.gitignore``.
     
-
-

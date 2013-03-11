@@ -4,13 +4,15 @@ import logging
 import os
 import urllib
 
+from nenslint.base import BaseChecker
 
 logger = logging.getLogger(__name__)
 
 GITIGNORE_URL = ('https://raw.github.com/lizardsystem/nensskel/master/'
                  'nensskel/templates/library/+dot+gitignore_tmpl')
 
-class Checker(object):
+
+class Checker(BaseChecker):
     check = "Do we have a proper ``.gitignore`` file?"
     reason = """
     A proper ``.gitignore`` file prevents us from accidentally committing files

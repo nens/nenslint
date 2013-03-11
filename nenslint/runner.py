@@ -23,15 +23,12 @@ def main():
     logging.basicConfig(level=loglevel,
                         format="%(levelname)s: %(message)s")
     for module in MODULES:
-        checker = getattr(module, 'Checker')()
+        checker_class = getattr(module, 'Checker')
+        checker = checker_class()
         if checker.looks_ok():
             logger.debug("Looks ok: %s", checker.check)
             continue
-        print("Potential problem: %s", checker.check)
-        print("Reason:")
-        print(checker.reason)
-        print("Fix:")
-        print(checker.fix)
+        print(checker_class.documentation())
         print("Suggested commands:\n")
         for command in checker.suggested_commands():
             print(command)

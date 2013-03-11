@@ -3,11 +3,13 @@ from __future__ import print_function
 import logging
 import os
 
+from nenslint.base import BaseChecker
+
 
 logger = logging.getLogger(__name__)
 
 
-class Checker(object):
+class Checker(BaseChecker):
     check = "Do we have old .txt files in the project root?"
     reason = """
     We use github, which renders ``.rst`` files as nicely formatted

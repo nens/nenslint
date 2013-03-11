@@ -21,24 +21,10 @@ outfile.write("""Available checks
 =================================
 
 """)
-template = """
-%(check)s
-------------------------------------------------------------------------------
-
-Reason
-%(reason)s
-
-Fix
-%(fix)s
-
-
-"""
 
 for module in MODULES:
     checker_class = getattr(module, 'Checker')
-    outfile.write(template % dict(check=checker_class.check,
-                                  reason=checker_class.reason,
-                                  fix=checker_class.fix))
+    outfile.write(checker_class.documentation())
     logger.info("Wrote documentation for %s", module)
 
 outfile.close()
