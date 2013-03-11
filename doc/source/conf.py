@@ -7,7 +7,7 @@
 import datetime
 
 project = "nenslint"
-author = ""
+author = "Reinout van Rees"
 version = ""
 release = ""
 this_year = datetime.date.today().year

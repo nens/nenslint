@@ -1,13 +1,9 @@
-Overview
-########
+.. include:: ../../README.rst
 
-TODO: Short one-paragraph intro.
+Available documentation
+-----------------------
 
 .. toctree::
    :maxdepth: 2
 
-   code
    project
-
-
-.. include:: ../../README.rst
