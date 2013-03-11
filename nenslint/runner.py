@@ -25,7 +25,14 @@ def main():
             logger.debug("Looks ok: %s", checker.check)
             continue
         logger.warn("Potential problem: %s", checker.check)
+        print("Reason:")
+        print(checker.reason)
+        print("Fix:")
+        print(checker.fix)
         print("Suggested commands:\n")
         for command in checker.suggested_commands():
             print(command)
         print()
+        answer = raw_input("Continue checking? [y/N] ")
+        if not 'y' in answer.lower():
+            return
