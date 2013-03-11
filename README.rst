@@ -41,3 +41,6 @@ Development notes
   easy. It also makes it more clear what's happening. Making it more clear
   might not be the best reason, but the easy testing is enough to stick with
   it for the time being.
+
+- After adding a checker, run ``bin/python update_documentation.py`` to update
+  the automatically-generated sphinx checker documentation.
