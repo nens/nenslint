@@ -8,10 +8,15 @@ from nenslint.tests import helpers
 
 class TxtToRstTest(unittest.TestCase):
 
-    def test_detects_problem(self):
+    def test_detects_problem1(self):
         with helpers.use_example_dir('txt_to_rst1'):
             checker = txt_to_rst.Checker()
             self.assertFalse(checker.looks_ok())
+
+    def test_detects_problem2(self):
+        with helpers.use_example_dir('txt_to_rst2'):
+            checker = txt_to_rst.Checker()
+            self.assertTrue(checker.looks_ok())
 
     def test_suggested_commands(self):
         with helpers.use_example_dir('txt_to_rst1'):
@@ -21,11 +26,6 @@ class TxtToRstTest(unittest.TestCase):
             self.assertEquals(
                 commands[0],
                 "git mv CHANGES.txt CHANGES.rst")
-
-    def test_detects_problem(self):
-        with helpers.use_example_dir('txt_to_rst2'):
-            checker = txt_to_rst.Checker()
-            self.assertTrue(checker.looks_ok())
 
     def test_only_setuppy1(self):
         with helpers.use_example_dir('txt_to_rst3'):
