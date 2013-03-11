@@ -37,5 +37,6 @@ setup(name='nenslint',
       extras_require={'test': tests_require},
       entry_points={
           'console_scripts': [
+            'nenslint = nenslint.runner:main',
           ]},
       )
