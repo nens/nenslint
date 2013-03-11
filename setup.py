@@ -19,14 +19,15 @@ tests_require = [
 
 setup(name='nenslint',
       version=version,
-      description="TODO",
+      description=("Lint tool for checking your project's setup and for "
+                   "upgrading it to the most modern setup"),
       long_description=long_description,
       # Get strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[],
       keywords=[],
-      author='TODO',
-      author_email='TODO@nelen-schuurmans.nl',
-      url='',
+      author='Reinout van Rees',
+      author_email='reinout.vanrees@nelen-schuurmans.nl',
+      url='https://github.com/nens/nenslint',
       license='GPL',
       packages=['nenslint'],
       include_package_data=True,
