@@ -9,38 +9,7 @@ details about many different aspects of our project setup. Who knows
 everything about buildout? i18n setup details? This script should know *and
 document it*.
 
-Usage
------
-
-Basic usage: call it and it'll spit out improvements it finds. Extra commands
+**Basic usage**: call it and it'll spit out improvements it finds. Extra commands
 are available for help in fixing it up.
 
-
-Current status of nenslint
---------------------------
-
-Barely started!
-
-TODO:
-
-- Upgrade to buildout 2.x.
-
-- Check our own version.
-
-- txt-to-rst switch.
-
-
-Development notes
------------------
-
-- Every kind of check should be in its own file.
-
-- Everything needs to be tested.
-
-- No changes ought to be made; only print commands. This makes testing
-  easy. It also makes it more clear what's happening. Making it more clear
-  might not be the best reason, but the easy testing is enough to stick with
-  it for the time being.
-
-- After adding a checker, run ``bin/python update_documentation.py`` to update
-  the automatically-generated sphinx checker documentation.
+(When you develop on nenslint, see the developer documentation in the sphinx docs).

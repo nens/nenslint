@@ -7,6 +7,12 @@ logger = logging.getLogger(__name__)
 
 
 class BaseChecker(object):
+    """Base class for all checkers.
+
+    Its goal is to document a checker's API and to enforce documentation
+    through automatic documentation generation.
+
+    """
     check = "Question-like oneliner what we're about to check?"
     reason = """
     Some docstring-like explanation why we want to check this and

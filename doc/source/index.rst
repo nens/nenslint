@@ -7,4 +7,5 @@ Available documentation
    :maxdepth: 2
 
    checks
+   developer
    project
