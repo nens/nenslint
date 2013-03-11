@@ -5,8 +5,11 @@ import logging
 import os
 
 from nenslint import txt_to_rst
+from nenslint import gitignore
 
-
+MODULES = [txt_to_rst,
+           gitignore,
+           ]
 logger = logging.getLogger(__name__)
 
 
@@ -19,12 +22,12 @@ def main():
     loglevel = options.verbose and logging.DEBUG or logging.INFO
     logging.basicConfig(level=loglevel,
                         format="%(levelname)s: %(message)s")
-    for module in [txt_to_rst]:
+    for module in MODULES:
         checker = getattr(module, 'Checker')()
         if checker.looks_ok():
             logger.debug("Looks ok: %s", checker.check)
             continue
-        logger.warn("Potential problem: %s", checker.check)
+        print("Potential problem: %s", checker.check)
         print("Reason:")
         print(checker.reason)
         print("Fix:")

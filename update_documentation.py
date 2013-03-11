@@ -4,7 +4,7 @@
 import logging
 import os
 
-from nenslint import txt_to_rst
+from nenslint.runner import MODULES
 
 
 logging.basicConfig(level=logging.DEBUG,
@@ -34,7 +34,7 @@ Fix
 
 """
 
-for module in [txt_to_rst]:
+for module in MODULES:
     checker_class = getattr(module, 'Checker')
     outfile.write(template % dict(check=checker_class.check,
                                   reason=checker_class.reason,
