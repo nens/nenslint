@@ -21,6 +21,7 @@ CHECKER_MODULE_NAMES = ['txt_to_rst',
                         ]
 
 logger = logging.getLogger(__name__)
+_raw_input = raw_input  # To make tests possible.
 
 
 def checker_classes():
@@ -67,7 +68,9 @@ def run_actual_checkers():
         for command in checker.suggested_commands():
             print(command)
         print()
-        answer = raw_input("Continue checking? [y/N] ")
+        answer = _raw_input("Continue checking? [y/N] ")
+        # ^^^ _raw_input is just raw_input, but with a local name to make
+        # testing possible.
         if not 'y' in answer.lower():
             return
 
