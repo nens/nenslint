@@ -16,19 +16,19 @@ class BaseChecker(object):
     :meth:`suggested_commands` methods.
 
     """
-    check = "Question-like oneliner what we're about to check?"
-    reason = """
-    Some docstring-like explanation why we want to check this and
-    why it is important.
-
-    Keep it indented, like here, with four spaces. This helps with rendering
-    the documentation.
-    """
-    fix = """
-    A textual explanation of how to fix it.
-
-    For indentation rules, see 'reason'.
-    """
+    #: Question-like oneliner that tells what we're about to check.
+    check = "Fill this in."
+    #: Some docstring-like multi-line explanation why we want to check this
+    #: and why it is important.
+    #:
+    #: Keep it indented in the source file, with four spaces. This helps with
+    #: rendering the documentation. Look at an existing checker to see how it
+    #: can be done.
+    reason = "Fill this in."
+    #: A textual explanation of how to fix it.
+    #:
+    #: For indentation rules, see :attr:`reason`.
+    fix = "Fill this in."
 
     def __init__(self):
         """Do whatever you need to do to set it up.
