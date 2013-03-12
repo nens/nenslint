@@ -45,3 +45,16 @@ Adding a new checker means adding a separate module with a class named
 .. autoclass:: nenslint.base.BaseChecker
    :members: check, reason, fix, looks_ok, suggested_commands, documentation
    :undoc-members:
+
+.. todo::
+
+   Add doc comments to the attributes.
+
+Of course you should add tests in the ``tests/`` subdirectory. Look at the
+other test files to see how it's done.
+
+Lastly, add the new checker to :attr:`nenslint.runner.MODULES`.
+
+.. todo::
+
+   Add documentation on the runner module.
