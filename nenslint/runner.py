@@ -2,7 +2,6 @@ from __future__ import print_function
 from __future__ import unicode_literals
 from optparse import OptionParser
 import logging
-import os
 
 from nenslint import txt_to_rst
 from nenslint import gitignore

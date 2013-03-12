@@ -40,13 +40,8 @@ Adding a new checker
 --------------------
 
 Adding a new checker means adding a separate module with a class named
-``Checker`` that subclasses :class:`BaseChecker`.
+``Checker`` that subclasses :class:`nenslint.base.BaseChecker`.
 
-.. py:module:: nenslint.base
-
-.. autoclass:: BaseChecker
-
-   :members:
+.. autoclass:: nenslint.base.BaseChecker
+   :members: check, reason, fix, looks_ok, suggested_commands, documentation
    :undoc-members:
-
-**TODO**: sphinx' autodoc seems to fail here...

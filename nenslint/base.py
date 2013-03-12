@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 from __future__ import print_function
 import logging
-import os
 
 logger = logging.getLogger(__name__)
 
@@ -11,6 +10,10 @@ class BaseChecker(object):
 
     Its goal is to document a checker's API and to enforce documentation
     through automatic documentation generation.
+
+    In a subclass, you need to fill in the :attr:`check`, :attr:`reason` and
+    :attr:`fix` attributes and implement the :meth:`looks_ok` and
+    :meth:`suggested_commands` methods.
 
     """
     check = "Question-like oneliner what we're about to check?"
